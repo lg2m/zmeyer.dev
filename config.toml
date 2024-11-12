@@ -119,14 +119,10 @@ bottom_footnotes = false
 # Configuration of the link checker.
 [link_checker]
 # Skip link checking for external URLs that start with these prefixes
-skip_prefixes = [
-    "http://[2001:db8::]/",
-]
+skip_prefixes = ["http://[2001:db8::]/"]
 
 # Skip anchor checking for external URLs that start with these prefixes
-skip_anchor_prefixes = [
-    "https://caniuse.com/",
-]
+skip_anchor_prefixes = ["https://caniuse.com/"]
 
 # Treat internal link problems as either "error" or "warn", default is "error"
 internal_level = "error"
@@ -200,8 +196,8 @@ index_format = "elasticlunr_javascript"
 #
 [extra]
 nav = [
-    { name = "Home", path = "/" },
-    { name = "Blog", path = "/blog" },
-    { name = "Links", path = "/links" },
-    { name = "Projects", path = "/projects" },
+  { name = "Home", path = "/" },
+  { name = "Blog", path = "/blog" },
+  { name = "Links", path = "/links" },
+  { name = "Projects", path = "/projects" },
 ]

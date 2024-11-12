@@ -12,6 +12,13 @@ When I am not looking at a screen, I like to spend my time with my beautiful wif
 ## Current Work: Scaling Data Management for Machine Learning
 
 I am currently focused on building and refining data management tooling to support modeling at scale. My role involves streamlining the entire data lifecycle, from collection and cleaning to pre-processing and readiness for model training. By building tools that scale, my goal is to simplify the complex process and enhance the reliability of data pipelines for ML apps.
+___
+
+#### Contact Me:
+
+- email: [hi@zmeyer.me](mailto:hi@zmeyer.me)
+- x: [@absencelul](https://x.com/absencelul)
+- discord: .absence
 
 [blog]: @/blog/_index.md
 [projects]: @/projects/_index.md

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>{% if page.title %}{{ page.title }} :: {% endif %}{{ config.title }}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+      {% if page.title %}{{ page.title }} :: {% endif %}{{ config.title }}
+    </title>
     <link rel="stylesheet" href="{{ get_url(path="global.css") | safe }}">
-    <meta name="description"
-        content="{% if page.description %}{{ page.description | safe }}{% else %}{{ config.description | safe }}{% endif %}">
-    <meta property="og:title"
-        content="{% if page.title %}{{ page.title | safe }} :: {% endif %}{{ config.title | safe }}">
-    <meta property="og:description"
-        content="{% if page.description %}{{ page.description | safe }}{% else %}{{ config.description | safe }}{% endif %}">
-    <meta property="og:type" content="website">
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description | safe }}{% else %}{{ config.description | safe }}{% endif %}"
+    />
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title | safe }} :: {% endif %}{{ config.title | safe }}"
+    />
+    <meta
+      property="og:description"
+      content="{% if page.description %}{{ page.description | safe }}{% else %}{{ config.description | safe }}{% endif %}"
+    />
+    <meta property="og:type" content="website" />
     {% if current_url %}
-    <meta property="og:url" content="{{ current_url | safe }}">
-    <link rel="canonical" href="{{ current_url | safe }}">
+    <meta property="og:url" content="{{ current_url | safe }}" />
+    <link rel="canonical" href="{{ current_url | safe }}" />
     {% endif %}
-    <meta name="twitter:card" content="summary">
-</head>
+    <meta name="twitter:card" content="summary" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            {% for link in config.extra.nav %}
-            <a href="{{ link.path | safe }}">{{ link.name }}</a>
-            {% endfor %}
-        </nav>
+      <nav>
+        {% for link in config.extra.nav %}
+        <a href="{{ link.path | safe }}">{{ link.name }}</a>
+        {% endfor %}
+      </nav>
     </header>
-    <main>
-        {% block content %}{% endblock content %}
-    </main>
-</body>
-
+    <main>{% block content %}{% endblock content %}</main>
+  </body>
 </html>

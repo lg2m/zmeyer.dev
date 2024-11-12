@@ -1,11 +1,15 @@
-{% extends "index.html" %}
-{% block content %}
+{% extends "index.html" %} {% block content %}
 <article>
-    <h1><a href="{{ current_url | safe }}">{{ page.title | safe }}</a></h1>
-    <small>
-        <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
-        by <a href="{{ config.base_url | safe }}">{{ page.authors | join(sep=", ") }}</a>
-    </small>
-    {{ page.content | safe }}
+  <h1>{{ page.title | safe }}</h1>
+  <small>
+    <time datetime="{{ page.date }}"
+      >{{ page.date | date(format="%B %d, %Y") }}</time
+    >
+    by
+    <a href="{{ config.base_url | safe }}"
+      >{{ page.authors | join(sep=", ") }}</a
+    >
+  </small>
+  {{ page.content | safe }}
 </article>
 {% endblock content %}
